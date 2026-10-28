@@ -1,0 +1,51 @@
+{
+  "name": "grupofixit/fixitpay-client-php",
+  "description": "SDK oficial PHP/Laravel para a Plataforma Central de Pagamentos Grupo FixIT (FixitPay)",
+  "type": "library",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Grupo FixIT Limitada",
+      "email": "dev@grupofixit.co.mz",
+      "homepage": "https://grupofixit.co.mz"
+    }
+  ],
+  "keywords": [
+    "mpesa",
+    "fixitpay",
+    "grupofixit",
+    "vodacom",
+    "payments",
+    "mozambique",
+    "c2b",
+    "b2c",
+    "sdk",
+    "laravel"
+  ],
+  "require": {
+    "php": "^8.2 || ^8.3 || ^8.4",
+    "ext-json": "*",
+    "ext-curl": "*",
+    "ext-hash": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "GrupoFixIT\\PaymentsClient\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "GrupoFixIT\\PaymentsClient\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "GrupoFixIT\\PaymentsClient\\Laravel\\FixitPaymentsServiceProvider"
+      ],
+      "aliases": {
+        "FixitPayments": "GrupoFixIT\\PaymentsClient\\Laravel\\Facades\\FixitPayments"
+      }
+    }
+  }
+}
